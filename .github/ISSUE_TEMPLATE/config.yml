@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Email support
+    url: mailto:support@ericslutz.dev?subject=GUS%20SUPPORT
+    about: Email support with the GUS SUPPORT subject prefix.

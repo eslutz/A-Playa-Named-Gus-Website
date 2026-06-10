@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gus.ericslutz.dev/sitemap.xml

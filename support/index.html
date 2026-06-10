@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support - A Playa Named Gus</title>
+  <meta name="description" content="Support, FAQ, and troubleshooting for A Playa Named Gus.">
+  <link rel="canonical" href="https://gus.ericslutz.dev/support">
+  <link rel="icon" href="/assets/gus-icon.png">
+  <link rel="apple-touch-icon" href="/assets/gus-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="/">
+        <img src="/assets/gus-icon.png" alt="" width="34" height="34">
+        <span>A Playa Named Gus</span>
+      </a>
+      <div class="nav-links">
+        <a href="/support" aria-current="page">Support</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/accessibility">Accessibility</a>
+        <a href="/age-suitability">Age Suitability</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page">
+        <h1>Support</h1>
+        <p class="page-intro">Get help connecting to a Jellyfin server, playing media, using downloads, and reporting reproducible issues.</p>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="content-grid">
+        <div>
+          <article class="content-block">
+            <h2>Contact</h2>
+            <p>GitHub Issues are the primary support route because they make reproducible bugs easier to track.</p>
+            <p><a class="button primary" href="https://github.com/eslutz/A-Playa-Named-Gus-Website/issues/new/choose">Open a GitHub Issue</a></p>
+            <p>Email is also available at <a href="mailto:support@ericslutz.dev?subject=GUS%20SUPPORT">support@ericslutz.dev</a>. Keep the subject prefix <strong>GUS SUPPORT</strong> so support mail is routed correctly.</p>
+          </article>
+
+          <article class="content-block">
+            <h2>Before reporting a bug</h2>
+            <ul>
+              <li>Confirm the Jellyfin server URL works in Safari on the same network.</li>
+              <li>Note the platform: iPhone, iPad, Apple TV, Apple Vision Pro, or Mac.</li>
+              <li>Include the app version, Jellyfin server version, and whether the server uses HTTP or HTTPS.</li>
+              <li>Describe the media type and playback path, but do not include private server URLs, passwords, tokens, or personal library screenshots.</li>
+            </ul>
+          </article>
+
+          <article class="content-block">
+            <h2>FAQ</h2>
+            <div class="faq">
+              <h3>What do I need to use Gus?</h3>
+              <p>You need access to a Jellyfin server. Gus is a client app and does not include hosted media or a hosted Jellyfin account.</p>
+            </div>
+            <div class="faq">
+              <h3>Does Gus support Quick Connect?</h3>
+              <p>Quick Connect support is part of the sign-in flow when the connected Jellyfin server supports it.</p>
+            </div>
+            <div class="faq">
+              <h3>Why can local server discovery ask for network permission?</h3>
+              <p>Find Local Servers uses the local network to discover Jellyfin servers. Manual URL entry remains available if you do not want to use discovery.</p>
+            </div>
+            <div class="faq">
+              <h3>Can I use an HTTP server?</h3>
+              <p>Self-hosted Jellyfin servers often use HTTP on trusted local networks. For remote access, use HTTPS and server configuration appropriate for your network.</p>
+            </div>
+            <div class="faq">
+              <h3>Why does playback fail for some files?</h3>
+              <p>Playback depends on the media, Jellyfin server capabilities, network conditions, and AVKit support on the current Apple platform. If a file fails, include format details and whether it direct-plays or transcodes on the server.</p>
+            </div>
+            <div class="faq">
+              <h3>Where are downloads available?</h3>
+              <p>Downloads are available on iPhone, iPad, Mac, and Apple Vision Pro where supported by the app and server. Apple TV streams only.</p>
+            </div>
+            <div class="faq">
+              <h3>What is Gus Cinema?</h3>
+              <p>Gus Cinema is the Apple Vision Pro immersive playback path for supported scenarios. Availability depends on platform support, media format, and the current release state.</p>
+            </div>
+          </article>
+        </div>
+
+        <aside class="side-panel" aria-labelledby="support-links">
+          <h2 id="support-links">Useful links</h2>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/accessibility">Accessibility</a></li>
+            <li><a href="/age-suitability">Age Suitability</a></li>
+            <li><a href="https://github.com/eslutz/A-Playa-Named-Gus/wiki">Project Wiki</a></li>
+            <li><a href="https://github.com/eslutz/A-Playa-Named-Gus">Project Repository</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/accessibility">Accessibility</a>
+      <a href="/age-suitability">Age Suitability</a>
+    </div>
+    <p>A Playa Named Gus is not affiliated with Jellyfin. A Jellyfin server is required.</p>
+  </footer>
+</body>
+</html>
