@@ -6,13 +6,12 @@
       <stop offset="0" stop-color="#0B2E33"/>
       <stop offset="1" stop-color="#061A1E"/>
     </linearGradient>
-    <linearGradient id="stroke" x1="58" y1="50" x2="206" y2="212" gradientUnits="userSpaceOnUse">
+    <linearGradient id="letter" x1="62" y1="52" x2="190" y2="202" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#B8E3E9"/>
       <stop offset="1" stop-color="#4F7C82"/>
     </linearGradient>
   </defs>
   <rect width="256" height="256" rx="56" fill="url(#field)"/>
-  <path d="M186 75a77 77 0 1 0 7 99" fill="none" stroke="url(#stroke)" stroke-width="26" stroke-linecap="round"/>
-  <path d="M124 128h68" fill="none" stroke="#B8E3E9" stroke-width="26" stroke-linecap="round"/>
-  <path d="M163 93l55 32a7 7 0 0 1 0 12l-55 32a7 7 0 0 1-11-6v-64a7 7 0 0 1 11-6z" fill="#93B1B5"/>
+  <text x="47" y="188" fill="url(#letter)" font-family="Avenir Next, SF Pro Display, ui-sans-serif, system-ui, sans-serif" font-size="164" font-weight="800">G</text>
+  <path d="M169 123l28 16a5 5 0 0 1 0 8l-28 16a5 5 0 0 1-8-4v-32a5 5 0 0 1 8-4z" fill="#93B1B5"/>
 </svg>
