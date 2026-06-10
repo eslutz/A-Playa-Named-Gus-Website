@@ -434,19 +434,161 @@ button:focus-visible {
   .hero-inner {
     gap: 28px;
     min-height: auto;
-    padding-top: 56px;
+    padding: 56px 24px 60px;
   }
 
   .visual {
-    min-height: 360px;
+    display: grid;
+    justify-items: center;
+    margin-top: 16px;
+    min-height: 0;
+    padding-top: 48px;
   }
 
   .icon-plate {
-    left: 0;
+    left: max(12px, calc(50% - 178px));
+    padding: 10px;
+    top: 0;
+    width: 104px;
+  }
+
+  .device {
+    bottom: auto;
+    max-width: 100%;
+    min-width: 0;
+    position: relative;
+    right: auto;
+    width: min(100%, 340px);
+  }
+
+  .screen {
+    padding: 70px 18px 18px;
+  }
+
+  .screen-title {
+    font-size: 1rem;
+  }
+
+  .library-row {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .library-row span {
+    text-align: right;
   }
 
   .feature-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1100px) {
+  .hero-inner {
+    gap: 32px;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
+  }
+
+  .icon-plate {
+    left: 0;
+    top: -72px;
+    width: 150px;
+  }
+
+  .device {
+    width: min(340px, 100%);
+  }
+
+  .screen {
+    padding-top: 82px;
+  }
+}
+
+@media (max-width: 520px) {
+  body {
+    font-size: 16px;
+  }
+
+  .nav {
+    gap: 18px;
+    padding: 18px 20px;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .brand img {
+    height: 42px;
+    width: 42px;
+  }
+
+  .nav-links {
+    display: grid;
+    gap: 8px 18px;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+  }
+
+  .nav-links a {
+    font-size: 0.98rem;
+  }
+
+  .hero-inner {
+    padding: 48px 20px 56px;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+    line-height: 1.04;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    line-height: 1.62;
+    margin-top: 26px;
+  }
+
+  .actions {
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 28px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .visual {
+    margin-top: 28px;
+    padding-top: 44px;
+  }
+
+  .icon-plate {
+    left: 16px;
+  }
+
+  .device {
+    width: 100%;
+  }
+
+  .section,
+  .page {
+    padding: 56px 20px;
+  }
+
+  .page-hero .page {
+    padding-bottom: 48px;
+    padding-top: 48px;
+  }
+
+  .content-block + .content-block {
+    margin-top: 28px;
+  }
+
+  .side-panel {
+    padding: 18px;
   }
 }
 
