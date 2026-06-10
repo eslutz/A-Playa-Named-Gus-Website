@@ -349,6 +349,11 @@ button:focus-visible {
   padding-top: 24px;
 }
 
+.content-block:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
 .content-block + .content-block {
   margin-top: 34px;
 }
