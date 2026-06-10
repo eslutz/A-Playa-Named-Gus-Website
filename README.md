@@ -5,6 +5,11 @@ Static public website for A Playa Named Gus at `https://gus.ericslutz.dev`.
 The site is intentionally plain HTML and CSS so GitHub Pages can host it without a build
 pipeline, runtime dependency updates, or cloud app infrastructure.
 
+The visual theme follows the app docs' Winter Chill palette:
+`#0B2E33`, `#B8E3E9`, `#4F7C82`, and `#93B1B5`. The website mark in
+`assets/gus-mark.svg` is a placeholder until the app icon direction is finalized in the
+main app repository.
+
 ## Routes
 
 - `/` - Marketing URL

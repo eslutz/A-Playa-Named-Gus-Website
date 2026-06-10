@@ -1,17 +1,20 @@
 :root {
   color-scheme: light dark;
-  --navy: #000b25;
-  --ink: #101828;
-  --muted: #526071;
-  --line: #d8e0ea;
+  --brand-base: #0b2e33;
+  --brand-night: #061a1e;
+  --ice: #b8e3e9;
+  --teal-mid: #4f7c82;
+  --mist: #93b1b5;
+  --ink: #102326;
+  --muted: #53676b;
+  --line: #d8e6e9;
   --paper: #ffffff;
-  --paper-soft: #f6f8fb;
-  --purple: #ac5cc3;
-  --blue: #00a4dc;
-  --blue-dark: #087da3;
-  --focus: #007aff;
+  --paper-soft: #f4f9fa;
+  --link: #386c72;
+  --link-hover: #0b2e33;
+  --focus: #4f7c82;
   --radius: 8px;
-  --shadow: 0 20px 50px rgb(0 11 37 / 12%);
+  --shadow: 0 20px 50px rgb(11 46 51 / 14%);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
 }
 
@@ -33,13 +36,13 @@ body {
 }
 
 a {
-  color: var(--blue-dark);
+  color: var(--link);
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.2em;
 }
 
 a:hover {
-  color: var(--purple);
+  color: var(--link-hover);
 }
 
 a:focus-visible,
@@ -105,8 +108,9 @@ button:focus-visible {
 
 .hero {
   background:
-    radial-gradient(circle at 84% 10%, rgb(0 164 220 / 14%), transparent 34%),
-    linear-gradient(180deg, #f9fbff 0%, #ffffff 72%);
+    radial-gradient(circle at 84% 10%, rgb(184 227 233 / 46%), transparent 34%),
+    radial-gradient(circle at 16% 86%, rgb(147 177 181 / 18%), transparent 30%),
+    linear-gradient(180deg, #f6fbfc 0%, #ffffff 72%);
   overflow: hidden;
 }
 
@@ -122,7 +126,7 @@ button:focus-visible {
 
 .hero h1,
 .page-hero h1 {
-  color: var(--navy);
+  color: var(--brand-base);
   font-size: clamp(2.75rem, 6vw, 5.4rem);
   letter-spacing: 0;
   line-height: 0.98;
@@ -157,14 +161,14 @@ button:focus-visible {
 }
 
 .button.primary {
-  background: var(--navy);
+  background: var(--brand-base);
   color: #ffffff;
 }
 
 .button.secondary {
   background: #ffffff;
   border-color: var(--line);
-  color: var(--navy);
+  color: var(--brand-base);
 }
 
 .visual {
@@ -175,7 +179,7 @@ button:focus-visible {
 
 .icon-plate {
   background: #ffffff;
-  border: 1px solid rgb(216 224 234 / 78%);
+  border: 1px solid rgb(216 230 233 / 82%);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   left: -70px;
@@ -194,7 +198,8 @@ button:focus-visible {
 }
 
 .device {
-  background: var(--navy);
+  background:
+    linear-gradient(145deg, var(--brand-base), var(--brand-night));
   border: 1px solid rgb(255 255 255 / 22%);
   border-radius: var(--radius);
   bottom: 0;
@@ -227,7 +232,8 @@ button:focus-visible {
   padding: 82px 22px 22px;
 }
 
-.screen-title {
+.hero .screen-title {
+  color: #ffffff;
   font-size: 1.16rem;
   font-weight: 800;
   margin: 0 0 18px;
@@ -255,7 +261,7 @@ button:focus-visible {
 
 .section h2,
 .page h2 {
-  color: var(--navy);
+  color: var(--brand-base);
   font-size: clamp(2rem, 4vw, 3.2rem);
   letter-spacing: 0;
   line-height: 1.08;
@@ -286,7 +292,7 @@ button:focus-visible {
 .callout h3,
 .content-block h3,
 .faq h3 {
-  color: var(--navy);
+  color: var(--brand-base);
   font-size: 1.14rem;
   line-height: 1.2;
   margin: 0 0 8px;
@@ -322,8 +328,8 @@ button:focus-visible {
 
 .page-hero {
   background:
-    radial-gradient(circle at 88% 0%, rgb(172 92 195 / 12%), transparent 30%),
-    linear-gradient(180deg, #f9fbff 0%, #ffffff 100%);
+    radial-gradient(circle at 88% 0%, rgb(184 227 233 / 34%), transparent 30%),
+    linear-gradient(180deg, #f6fbfc 0%, #ffffff 100%);
   border-bottom: 1px solid var(--line);
 }
 
@@ -600,24 +606,27 @@ button:focus-visible {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink: #eef4ff;
-    --muted: #aeb8c7;
-    --line: #283244;
-    --paper: #070b14;
-    --paper-soft: #101827;
-    --blue-dark: #49c7ee;
-    --shadow: 0 20px 50px rgb(0 0 0 / 32%);
+    --ink: #eef8f9;
+    --muted: #a6b9bd;
+    --line: #27464b;
+    --paper: #061a1e;
+    --paper-soft: #0b2e33;
+    --link: #b8e3e9;
+    --link-hover: #93b1b5;
+    --focus: #b8e3e9;
+    --shadow: 0 20px 50px rgb(0 0 0 / 34%);
   }
 
   .site-header {
-    background: rgb(7 11 20 / 88%);
+    background: rgb(6 26 30 / 88%);
   }
 
   .hero,
   .page-hero {
     background:
-      radial-gradient(circle at 84% 10%, rgb(0 164 220 / 18%), transparent 34%),
-      linear-gradient(180deg, #071126 0%, #070b14 72%);
+      radial-gradient(circle at 84% 10%, rgb(184 227 233 / 16%), transparent 34%),
+      radial-gradient(circle at 16% 86%, rgb(79 124 130 / 16%), transparent 30%),
+      linear-gradient(180deg, #0b2e33 0%, #061a1e 72%);
   }
 
   .hero h1,
@@ -635,6 +644,11 @@ button:focus-visible {
   .button.secondary,
   .callout,
   .icon-plate {
-    background: #101827;
+    background: #0b2e33;
+  }
+
+  .button.secondary {
+    border-color: #4f7c82;
+    color: #b8e3e9;
   }
 }
