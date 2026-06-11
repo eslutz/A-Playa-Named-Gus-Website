@@ -1,0 +1,12 @@
+{
+  "name": "A Playa Named Gus",
+  "short_name": "Gus",
+  "description": "An Apple-first Jellyfin client for iPhone, iPad, Apple TV, Apple Vision Pro, and Mac.",
+  "icons": [
+    { "src": "/assets/gus-mark.svg", "type": "image/svg+xml", "sizes": "any" }
+  ],
+  "theme_color": "#0b2e33",
+  "background_color": "#ffffff",
+  "display": "browser",
+  "start_url": "/"
+}

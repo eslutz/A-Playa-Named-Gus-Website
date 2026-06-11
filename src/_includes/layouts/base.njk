@@ -3,44 +3,49 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page Not Found - A Playa Named Gus</title>
-  <meta name="description" content="The requested A Playa Named Gus page could not be found.">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
   <link rel="icon" href="/assets/gus-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/gus-mark.svg">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preload" href="/assets/fonts/MonaSans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
+  {% if canonical %}
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:site_name" content="A Playa Named Gus">
+  {% endif %}
 </head>
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="/">
+      <a class="brand" href="/"{% if navCurrent == "home" %} aria-current="page"{% endif %}>
         <img src="/assets/gus-mark.svg" alt="" width="34" height="34">
         <span>A Playa Named Gus</span>
       </a>
       <div class="nav-links">
-        <a href="/support">Support</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/accessibility">Accessibility</a>
-        <a href="/age-suitability">Age Suitability</a>
+        <a href="/support"{% if navCurrent == "support" %} aria-current="page"{% endif %}>Support</a>
+        <a href="/privacy"{% if navCurrent == "privacy" %} aria-current="page"{% endif %}>Privacy</a>
+        <a href="/accessibility"{% if navCurrent == "accessibility" %} aria-current="page"{% endif %}>Accessibility</a>
+        <a href="/age-suitability"{% if navCurrent == "age-suitability" %} aria-current="page"{% endif %}>Age Suitability</a>
       </div>
     </nav>
   </header>
-  <main>
-    <section class="page-hero">
-      <div class="page">
-        <h1>Page not found.</h1>
-        <p class="page-intro">The page may have moved, or the address may be incorrect.</p>
-        <div class="actions">
-          <a class="button primary" href="/">Go Home</a>
-          <a class="button secondary" href="/support">Get Support</a>
-        </div>
-      </div>
-    </section>
-  </main>
+
+  {{ content | safe }}
+
   <footer class="site-footer">
     <div class="footer-groups">
       <nav class="footer-group" aria-label="Site pages">
         <h2>Site</h2>
         <a href="/">Home</a>
         <a href="/support">Support</a>
+      </nav>
+      <nav class="footer-group" aria-label="Site policies">
+        <h2>Policies</h2>
         <a href="/privacy">Privacy</a>
         <a href="/accessibility">Accessibility</a>
         <a href="/age-suitability">Age Suitability</a>
@@ -49,6 +54,7 @@
         <h2>Project</h2>
         <a href="https://github.com/eslutz/A-Playa-Named-Gus">Gus Repo</a>
         <a href="https://github.com/eslutz/A-Playa-Named-Gus/wiki">Gus Wiki</a>
+        <a href="https://github.com/eslutz/A-Playa-Named-Gus/discussions">Discussions</a>
       </nav>
       <nav class="footer-group" aria-label="Jellyfin links">
         <h2>Jellyfin</h2>

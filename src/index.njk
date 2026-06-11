@@ -1,0 +1,108 @@
+---
+layout: layouts/base.njk
+title: "A Playa Named Gus"
+description: "An Apple-first Jellyfin client for iPhone, iPad, Apple TV, Apple Vision Pro, and Mac."
+canonical: "https://gus.ericslutz.dev/"
+navCurrent: "home"
+---
+
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>A Playa Named Gus</h1>
+        <p>An Apple-first Jellyfin client for streaming your personal media library on iPhone, iPad, Apple TV, Apple Vision Pro, and Mac.</p>
+        <div class="actions">
+          <a class="button primary" href="/support">Get Support</a>
+          <a class="button secondary" href="https://github.com/eslutz/A-Playa-Named-Gus/wiki">Read the Wiki</a>
+        </div>
+      </div>
+      <div class="visual" aria-label="A Playa Named Gus brand mark and media library preview">
+        <div class="icon-plate">
+          <img src="/assets/gus-mark.svg" alt="A Playa Named Gus G play mark">
+        </div>
+        <div class="device" aria-hidden="true">
+          <div class="device-header">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="screen">
+            <p class="screen-title">Your Jellyfin library, native on Apple platforms.</p>
+            <div class="library-row"><strong>Movies</strong><span>AVKit playback</span></div>
+            <div class="library-row"><strong>Shows</strong><span>Continue Watching</span></div>
+            <div class="library-row"><strong>Music</strong><span>Now Playing</span></div>
+            <div class="library-row"><strong>Cinema</strong><span>visionOS</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="features">
+    <h2 id="features">Built around Apple system experiences.</h2>
+    <p class="section-intro">Gus connects to a Jellyfin server you provide, then uses native Apple frameworks for browsing, playback, downloads, accessibility, and platform navigation.</p>
+    <div class="feature-grid">
+      <article class="feature">
+        <h3>Connect to your server</h3>
+        <p>Sign in to your own Jellyfin server, browse libraries, search media, and open item details from an Apple-native SwiftUI interface.</p>
+      </article>
+      <article class="feature">
+        <h3>System playback</h3>
+        <p>Video playback is built on AVKit with system controls. Audio uses Now Playing and AirPlay where the platform supports them.</p>
+      </article>
+      <article class="feature">
+        <h3>Downloads where supported</h3>
+        <p>iPhone, iPad, Mac, and Apple Vision Pro can save compatible media from your server for local playback. Apple TV streams only.</p>
+      </article>
+      <article class="feature">
+        <h3>Apple TV streaming</h3>
+        <p>The tvOS experience follows Apple TV focus, remote, and playback conventions for living-room use.</p>
+      </article>
+      <article class="feature">
+        <h3>visionOS Cinema</h3>
+        <p>Apple Vision Pro support includes a native app experience and a Gus Cinema path for immersive playback scenarios.</p>
+      </article>
+      <article class="feature">
+        <h3>Privacy by design</h3>
+        <p>The app does not operate a developer backend and does not collect analytics, tracking data, server URLs, media metadata, or credentials for the developer.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="section" aria-labelledby="release">
+      <h2 id="release">Release status.</h2>
+      <p class="section-intro">A Playa Named Gus is in active development on the path to App Store submission. Final App Store screenshots and public download links will be added when release validation is complete.</p>
+      <div class="callout-row">
+        <article class="callout">
+          <h3>For testers</h3>
+          <p>TestFlight availability and feedback instructions will be published here when a public testing build is ready.</p>
+        </article>
+        <article class="callout">
+          <h3>For reviewers</h3>
+          <p>Review notes will reference the support, privacy, accessibility, and age-suitability pages on this site.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="resources">
+    <h2 id="resources">Resources.</h2>
+    <p class="section-intro">Use these links for support, privacy details, accessibility information, and the current development roadmap.</p>
+    <div class="feature-grid">
+      <article class="feature">
+        <h3><a href="/support">Support</a></h3>
+        <p>FAQ, troubleshooting, GitHub Issues, and the support email option.</p>
+      </article>
+      <article class="feature">
+        <h3><a href="/privacy">Privacy Policy</a></h3>
+        <p>How Gus stores local data, communicates with your Jellyfin server, and avoids developer-side collection.</p>
+      </article>
+      <article class="feature">
+        <h3><a href="/accessibility">Accessibility</a></h3>
+        <p>Supported accessibility goals, platform scope, and reporting path.</p>
+      </article>
+    </div>
+  </section>
+</main>
