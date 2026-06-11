@@ -12,8 +12,7 @@
     </linearGradient>
   </defs>
   <rect width="256" height="256" rx="56" fill="url(#field)"/>
-  <path d="M183 82a72 72 0 1 0 2 92" fill="none" stroke="url(#stroke)" stroke-width="28" stroke-linecap="round"/>
-  <path d="M124 132h61" fill="none" stroke="#B8E3E9" stroke-width="28" stroke-linecap="round"/>
-  <path d="M185 132v42" fill="none" stroke="#4F7C82" stroke-width="28" stroke-linecap="round"/>
-  <path d="M164 110l42 24a6 6 0 0 1 0 10l-42 24a6 6 0 0 1-9-5v-48a6 6 0 0 1 9-5z" fill="#93B1B5"/>
+  <path d="M186 75a77 77 0 1 0 7 99" fill="none" stroke="url(#stroke)" stroke-width="26" stroke-linecap="round"/>
+  <path d="M124 128h68" fill="none" stroke="#B8E3E9" stroke-width="26" stroke-linecap="round"/>
+  <path d="M163 93l55 32a7 7 0 0 1 0 12l-55 32a7 7 0 0 1-11-6v-64a7 7 0 0 1 11-6z" fill="#93B1B5"/>
 </svg>
