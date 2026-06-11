@@ -54,7 +54,15 @@ navCurrent: "support"
           </div>
           <div class="faq">
             <h3>Why does playback fail for some files?</h3>
-            <p>Playback depends on the media, Jellyfin server capabilities, network conditions, and AVKit support on the current Apple platform. If a file fails, include format details and whether it direct-plays or transcodes on the server.</p>
+            <p>Playback depends on the media, Jellyfin server capabilities, network conditions, and AVKit support on the current Apple platform. Files your device's hardware can decode play directly at original quality; everything else is transcoded by your server. If a file fails, include format details and whether it direct-plays or transcodes on the server.</p>
+          </div>
+          <div class="faq">
+            <h3>Can I limit streaming quality?</h3>
+            <p>Yes. Settings &rsaquo; Playback &rsaquo; Streaming Quality caps the playback bitrate (Maximum, High, Medium, or Low). Maximum lets compatible files play at original quality; lower settings ask your server to transcode for constrained networks.</p>
+          </div>
+          <div class="faq">
+            <h3>How do I turn off episode auto-play?</h3>
+            <p>Episodes auto-play the next episode when one finishes. Turn this off with Settings &rsaquo; Playback &rsaquo; Auto-Play Next Episode.</p>
           </div>
           <div class="faq">
             <h3>Where are downloads available?</h3>
