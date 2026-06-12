@@ -493,7 +493,7 @@
 
   .footer-stack {
     display: grid;
-    gap: var(--space-xl);
+    gap: 40px;
   }
 
   .footer-legal {
