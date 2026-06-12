@@ -8,6 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm install          # install Eleventy (one-time)
 npm start            # local dev server at http://localhost:8080 with hot reload
 npm run build        # production build to _site/
+npm test             # production build plus static navigation/footer assertions
 ```
 
 ## Deployment
@@ -32,7 +33,7 @@ canonical: "https://gus.ericslutz.dev/path"  # omit on 404
 navCurrent: "support"  # matches one of: home | support | privacy | accessibility | age-suitability
 ```
 
-The `navCurrent` value drives `aria-current="page"` on the matching nav link. Home page uses `navCurrent: "home"` which sets it on the brand link instead.
+The `navCurrent` value drives `aria-current="page"` on the matching header link when that page is in the header. Home page uses `navCurrent: "home"` which sets it on the brand link instead. Accessibility and age-suitability pages remain routable policy pages, but they are footer-only and do not have a current-state header link.
 
 **Routing** follows a directory convention: each route is a folder with an `index.njk` (`/support` → `src/support/index.njk`). Exception: `src/404.njk` uses `permalink: /404.html`.
 
@@ -79,7 +80,7 @@ Max content width is `1120px` on all layout containers.
 - `.button` / `.button.primary` / `.button.secondary` — the three CTA styles
 - `.content-grid` — two-column layout (main + `.side-panel` aside) on inner pages
 - `.footer-groups` — 4-column footer grid at desktop, 2×2 at ≤820px, single column at ≤520px
-- `aria-current="page"` on nav links styles the active page indicator (set via `navCurrent` front matter)
+- `aria-current="page"` on header links styles the active page indicator when the current page has a local header link
 
 ## Font
 

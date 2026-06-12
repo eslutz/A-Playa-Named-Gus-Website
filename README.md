@@ -35,6 +35,8 @@ npm start
 
 Then open `http://localhost:8080`. Changes hot-reload.
 
+Run `npm test` to build the site and verify the shared navigation/footer links.
+
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site with

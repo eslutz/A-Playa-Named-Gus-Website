@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "eleventy",
+    "test": "npm run build && node --test",
     "start": "eleventy --serve"
   },
   "devDependencies": {
