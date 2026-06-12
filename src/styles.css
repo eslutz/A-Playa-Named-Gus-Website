@@ -290,26 +290,6 @@
     position: relative;
   }
 
-  .icon-plate {
-    background: #ffffff;
-    border: 1px solid rgb(216 230 233 / 82%);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    left: -70px;
-    padding: 20px;
-    position: absolute;
-    top: 0;
-    width: min(190px, 48vw);
-    z-index: 2;
-  }
-
-  .icon-plate img {
-    border-radius: 18%;
-    display: block;
-    height: auto;
-    width: 100%;
-  }
-
   .device {
     background: linear-gradient(145deg, var(--brand-base), var(--brand-night));
     border: 1px solid rgb(255 255 255 / 22%);
@@ -538,13 +518,6 @@
     padding-top: var(--space-xl);
   }
 
-  .icon-plate {
-    left: max(12px, calc(50% - 178px));
-    padding: 10px;
-    top: 0;
-    width: 104px;
-  }
-
   .device {
     bottom: auto;
     max-width: 100%;
@@ -584,12 +557,6 @@
   .hero-inner {
     gap: var(--space-lg);
     grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
-  }
-
-  .icon-plate {
-    left: 0;
-    top: -72px;
-    width: 150px;
   }
 
   .device {
@@ -662,10 +629,6 @@
     padding-top: 44px;
   }
 
-  .icon-plate {
-    left: 16px;
-  }
-
   .device {
     width: 100%;
   }
@@ -725,8 +688,7 @@
   }
 
   .button.secondary,
-  .callout,
-  .icon-plate {
+  .callout {
     background: #0b2e33;
   }
 
