@@ -252,7 +252,8 @@
   .footer-groups {
     display: grid;
     gap: var(--space-md);
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, max-content);
+    justify-content: space-between;
   }
 }
 
