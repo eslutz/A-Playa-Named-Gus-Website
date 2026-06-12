@@ -252,7 +252,7 @@
   .footer-groups {
     display: grid;
     gap: 2rem clamp(6rem, 11vw, 9rem);
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     justify-content: start;
   }
 }
@@ -490,11 +490,6 @@
     font-size: 0.94rem;
     font-weight: 650;
     text-decoration: none;
-  }
-
-  .footer-stack {
-    display: grid;
-    gap: 40px;
   }
 
   .footer-legal {
