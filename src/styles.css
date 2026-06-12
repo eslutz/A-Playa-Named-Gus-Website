@@ -253,7 +253,6 @@
     display: grid;
     gap: var(--space-md);
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    margin-bottom: var(--space-md);
   }
 }
 
@@ -492,7 +491,20 @@
     text-decoration: none;
   }
 
-  .site-footer p {
+  .footer-stack {
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  .footer-legal {
+    border-top: 1px solid var(--line);
+    display: grid;
+    gap: var(--space-xs);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+  }
+
+  .footer-legal p {
     font-size: 0.92rem;
     margin: 0;
   }
