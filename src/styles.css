@@ -251,9 +251,9 @@
 
   .footer-groups {
     display: grid;
-    gap: var(--space-md);
-    grid-template-columns: repeat(4, max-content);
-    justify-content: space-between;
+    gap: 2rem clamp(6rem, 11vw, 9rem);
+    grid-template-columns: repeat(4, auto);
+    justify-content: start;
   }
 }
 
@@ -581,7 +581,7 @@
   }
 
   .footer-groups {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, auto);
   }
 }
 
@@ -694,7 +694,7 @@
   }
 
   .footer-groups {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
   }
 }
 
