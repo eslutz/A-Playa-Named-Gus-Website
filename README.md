@@ -1,45 +1,51 @@
 # A Playa Named Gus Website
 
-Static public website for A Playa Named Gus at `https://gus.ericslutz.dev`.
+Static public website for A Playa Named Gus at <https://gus.ericslutz.dev>.
 
-The site is built with [Eleventy](https://www.11ty.dev/) from Nunjucks templates in `src/`,
-so the shared header, footer, and metadata live in a single layout
-(`src/_includes/layouts/base.njk`). The output is plain HTML and CSS with no runtime
-JavaScript.
+The site is built with [Eleventy](https://www.11ty.dev/) from Nunjucks templates in `src/`. Shared page chrome, navigation, footer links, and metadata live in `src/_includes/layouts/base.njk`. The output is plain HTML and CSS with no runtime JavaScript.
 
-The visual theme follows the app docs' Winter Chill palette:
-`#0B2E33`, `#B8E3E9`, `#4F7C82`, and `#93B1B5`, set in
-[Mona Sans](https://github.com/github/mona-sans). The website mark in
-`src/assets/gus-mark.svg` is a placeholder until the app icon direction is finalized in
-the main app repository.
+## Site Structure
+
+- `src/index.njk` - home page.
+- `src/_includes/layouts/base.njk` - shared layout, metadata, header, and footer.
+- `src/styles.css` - site styling.
+- `src/assets/gus-mark.svg` - website mark placeholder until the app icon direction is finalized.
+- `src/assets/fonts/MonaSans.woff2` - Mona Sans web font.
+- `src/CNAME` - GitHub Pages custom domain.
+- `src/apple-app-site-association` and `src/.well-known/apple-app-site-association` - extensionless Apple association files.
+- `src/robots.txt`, `src/sitemap.xml`, and `src/manifest.webmanifest` - search and app metadata.
+- `.github/workflows/deploy.yml` - GitHub Pages deployment workflow.
+- `test/` - rendered output checks.
 
 ## Routes
 
-- `/` - Marketing URL
-- `/support` - App Store support URL
-- `/privacy` - App Store privacy policy URL
-- `/accessibility` - Accessibility disclosure URL
-- `/age-suitability` - App Review age-suitability context
+- `/` - product overview.
+- `/support/` - App Store support URL.
+- `/privacy/` - App Store privacy policy URL.
+- `/accessibility/` - accessibility disclosure URL.
+- `/age-suitability/` - App Review age-suitability context.
 
 ## Support Intake
 
-GitHub Issues are the primary support route. Email fallback is
-`support@ericslutz.dev`; mail links include the subject `GUS SUPPORT`.
+GitHub Issues are the primary support route. Email is secondary.
 
-## Local Preview
+## Local Development
 
 ```sh
 npm install
-npm start
+npm run start
 ```
 
-Then open `http://localhost:8080`. Changes hot-reload.
+Then open the local URL printed by Eleventy. Changes hot-reload.
 
-Run `npm test` to build the site and verify the shared navigation/footer links.
+## Validation
+
+```sh
+npm test
+```
+
+The test command builds the site and verifies shared navigation, footer links, and Apple association file output.
 
 ## Deployment
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site with
-Eleventy and deploys `_site/` to GitHub Pages. The custom domain `gus.ericslutz.dev` is
-configured in the repository's Pages settings (`src/CNAME` is included in the build
-output).
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site with Eleventy and deploys `_site/` to GitHub Pages. The custom domain `gus.ericslutz.dev` is configured in GitHub Pages and emitted through `src/CNAME`.
