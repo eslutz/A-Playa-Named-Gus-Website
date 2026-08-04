@@ -1,9 +1,13 @@
+/* Mona Sans is SIL OFL 1.1 with a Reserved Font Name, so it ships unmodified --
+   see assets/fonts/OFL.txt. The descriptors below describe the axes the file
+   actually has: weight 200-900 and width 75-125%. It carries no slant axis, so
+   no font-style range is declared. */
 @font-face {
   font-family: "Mona Sans";
   src: url("/assets/fonts/MonaSans.woff2") format("woff2 supports variations"),
        url("/assets/fonts/MonaSans.woff2") format("woff2");
   font-weight: 200 900;
-  font-style: normal oblique 0deg 20deg;
+  font-stretch: 75% 125%;
   font-display: swap;
 }
 
@@ -40,6 +44,9 @@
 
     font-family: "Mona Sans", ui-sans-serif, system-ui, -apple-system,
       BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    /* Mona Sans carries an optical-size axis; let it track the font size, which
+       matters across an h1 that scales to 5.4rem beside body copy. */
+    font-optical-sizing: auto;
   }
 
   @media (prefers-color-scheme: dark) {
