@@ -61,12 +61,22 @@ navCurrent: "support"
             <p>Yes. Settings &rsaquo; Playback &rsaquo; Streaming Quality caps the playback bitrate (Maximum, High, Medium, or Low). Maximum lets compatible files play at original quality; lower settings ask your server to transcode for constrained networks.</p>
           </div>
           <div class="faq">
+            <h3>Does closing the audio player stop playback?</h3>
+            <p>In the audio recovery update, Done closes the player while music or an audiobook keeps playing. Use Now Playing to reopen the same queue or pause it, and Stop to end playback. Signing out or switching accounts stops audio. This update is under validation; availability depends on your installed release.</p>
+
             <h3>How do I turn off episode auto-play?</h3>
             <p>Episodes auto-play the next episode when one finishes. Turn this off with Settings &rsaquo; Playback &rsaquo; Auto-Play Next Episode.</p>
           </div>
           <div class="faq">
             <h3>Where are downloads available?</h3>
             <p>Downloads are available on iPhone, iPad, Mac, and Apple Vision Pro where supported by the app and server. Apple TV streams only.</p>
+            <p>Playable originals download directly. When the container needs changing, Gus asks Jellyfin to preserve compatible video and audio while remuxing; only incompatible streams are re-encoded. Compatible HEVC video keeps its original resolution and surround audio. The preparation stage includes both remuxing and conversion, and percentage progress can remain unavailable when the server does not provide the file size.</p>
+          </div>
+          <div class="faq">
+            <h3>How do I find media saved on my device?</h3>
+            <p>The upcoming Downloaded section provides local search and show/season browsing, with a link to Manage Downloads. Completed files play from your device; unavailable thumbnails use a placeholder.</p>
+            <p>The updated transfer screen shows bytes received even when the server does not provide a total size. Percentage and approximate remaining time require a reliable size and measured speed. Processing estimates may be unavailable.</p>
+            <p>On iPhone and iPad, the updated background lifecycle saves completed transfers while Gus is backgrounded. Do not force-quit Gus while downloading. This update is undergoing physical-device acceptance; availability depends on the installed release.</p>
           </div>
           <div class="faq">
             <h3>What is Gus Cinema?</h3>
