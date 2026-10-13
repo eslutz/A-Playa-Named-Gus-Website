@@ -19,7 +19,7 @@ navCurrent: "privacy"
       <div>
         <article class="content-block">
           <h2>Last updated</h2>
-          <p>June 10, 2026</p>
+          <p>October 12, 2026</p>
         </article>
 
         <article class="content-block">
@@ -33,6 +33,12 @@ navCurrent: "privacy"
             <li>Optional downloaded media files and metadata for the active Jellyfin server and user on iPhone, iPad, Mac, and Apple Vision Pro.</li>
           </ul>
           <p>Downloaded media is stored in the app container, scoped by server and user, and excluded from device backup. Apple TV does not support persistent local downloads in Gus.</p>
+        </article>
+
+        <article class="content-block">
+          <h2>Optional private iCloud synchronization</h2>
+          <p>In builds that include playlists and Next Up synchronization, the app can synchronize playlist names, movie and episode references, entry order, playlist position, saved Next Up items, and Gus activity timestamps through your private Apple CloudKit database. Synchronization is enabled when available and can be turned off in Settings → iCloud Sync.</p>
+          <p>Jellyfin credentials, tokens, server URLs, signed artwork URLs, downloaded files, and imported Jellyfin watch history are excluded. Each device signs in to Jellyfin independently. Offline changes stay on the device until synchronization is available. Changing accounts isolates saved lists and pending changes.</p>
         </article>
 
         <article class="content-block">
