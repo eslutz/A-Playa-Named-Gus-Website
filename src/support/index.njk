@@ -12,7 +12,9 @@ navCurrent: "support"
       <h1>Support</h1>
       <p class="page-intro">Get help connecting to a Jellyfin server, playing media, using downloads, and reporting reproducible issues.</p>
     </div>
-  </section>
+    <h3>iPhone and iPad themes</h3>
+  <p>In Settings → Appearance, choose Gus Default, Apple Default, or a custom accent with the system color picker. Theme is saved on this device and is separate from light or dark appearance. Closing Now Playing keeps prepared audio available in the mini-player.</p>
+</section>
 
   <section class="page">
     <div class="content-grid">
@@ -37,12 +39,42 @@ navCurrent: "support"
         <article class="content-block">
           <h2>FAQ</h2>
           <div class="faq">
+            <h3>Why does a saved item have missing artwork or appear unavailable?</h3>
+            <p>Moving or rebuilding a Jellyfin library can change an item's ID. Confirm that the item still appears in Jellyfin, then refresh Home in Gus. When your build offers Choose Replacement, select the correct library item and edition. Downloaded files stay on the device; transferring saved progress to a replacement requires a separate confirmation. Older builds may require removing the saved queue entry and adding the current library item again.</p>
+          </div>
+          <div class="faq">
+            <h3>Where are the iPhone navigation and sign-in options?</h3>
+            <p>The iPhone redesign candidate defaults to Home, Movies and Series where available, with More for other destinations and a separate Search control for your Jellyfin library. Existing account-specific navigation preferences keep their first three visible sections; change visibility and ordering in Settings → Navigation. Libraries and media libraries offer list/grid switching on iPhone. Quick Connect and public profiles are under More sign-in options. Availability depends on the installed build; this candidate is under validation.</p>
+          </div>
+          <div class="faq">
             <h3>What do I need to use Gus?</h3>
             <p>You need access to a Jellyfin server. Gus is a client app and does not include hosted media or a hosted Jellyfin account.</p>
+            <p>Gus targets OS 26.0 or later on iPhone, iPad, Apple TV, Apple Vision Pro, Mac, and Apple Watch, with newer system features available on OS 27 where supported.</p>
+          </div>
+          <div class="faq">
+            <h3>What should I check when sign-in fails?</h3>
+            <p>Check that the server opens in Safari on the same device. A connection timeout or server-request error does not mean your password is wrong. If the same account works in Jellyfin but fails in Gus, include the app and server versions and the error message in your report; never send your password or access token.</p>
+          </div>
+          <div class="faq">
+            <h3>How do I change my Jellyfin profile?</h3>
+            <p>In builds with the updated profile editor, open Settings → Account → View and Edit Profile. On tvOS 27, use the account menu in the sidebar. You can change your username, playback languages, profile picture or password. Change Profile Picture opens Photos on iPhone, iPad, Mac and Vision Pro. On Apple TV, choose a photo from your Jellyfin library.</p>
+            <p>Enter your current Jellyfin password to save changes. In builds that support passwordless profile editing, leave Current Password blank if your account has no password. To set or change a password, enter and confirm the new one. The changes apply to the signed-in Jellyfin account. A new username becomes your sign-in name, and a password change signs your other Jellyfin devices out.</p>
           </div>
           <div class="faq">
             <h3>How do I connect or hide Discover?</h3>
-            <p>In builds with Discover, open it in the menu and choose Connect to Seerr or Hide Menu Item. Settings → Navigation and Settings → Discover let you restore it. Enter the address of a configured Seerr 3.x instance from 3.3.0, choose Continue, then use an enabled local or Jellyfin sign-in on the next screen. Back discards entered credentials; Cancel closes setup. Older Overseerr/Jellyseerr instances must migrate to Seerr. Read the <a href="https://github.com/eslutz/A-Playa-Named-Gus/wiki/Discover">Discover guide</a> for requests, permissions, and validation limits.</p>
+            <p>Open Discover and choose Connect to Seerr. Enter the full address of your configured Seerr 3.x instance, including any proxy path. Choose Continue, then use one of the sign-in methods offered by the server. Back clears the transient password. Older Overseerr/Jellyseerr instances must migrate to Seerr.</p>
+            <p>Before setup, Hide Menu Item appears below Connect to Seerr. After setup, use Settings → Seerr → Show Discover or Settings → Navigation to hide or restore Discover, even if Seerr is offline.</p>
+            <p>The connection belongs to the current Gus Jellyfin server/account on this device. Gus stores session cookies in Apple Keychain and does not save passwords or synchronize Seerr sessions through iCloud. Hiding Discover preserves the connection; Disconnect removes it. The expanded integration is under validation on iPhone, iPad, Mac, Apple TV, and Vision Pro. Watch has no Discover destination. Read the <a href="https://github.com/eslutz/A-Playa-Named-Gus/wiki/Discover">Discover guide</a> for setup and validation limits.</p>
+          </div>
+          <div class="faq">
+            <h3>What can I browse or request in Discover?</h3>
+            <p>In the expanded Discover candidate, the featured carousel rotates through up to eight Trending titles chosen daily. Swipe or use the dots to change cards, and select the card to open the title. Browse popular titles by movie genre, studio, TV genre, or network where Seerr enables those shelves. Title pages link to similar and recommended titles when available. Discover searches Seerr's catalog separately from your Jellyfin library. Review a movie request or select eligible seasons before submitting. Seerr permissions, quota, availability, existing requests, content restrictions, and server settings determine what you can request. Requests use the server's destination and quality defaults; accounts with advanced-request permission can choose the available service, profile, folder, and language options.</p>
+            <p>On Apple TV, choose My Requests at the top of Discover. On other devices, open it from the three-dot menu. You can browse your history by status or cancel your own pending request. The Discover menu includes Manage Requests only with management permission, for inspecting pending requests before approving or declining them. Approval does not mean the media is ready to play. For available titles, Find in Gus checks for a match, and Open in Gus appears only for media accessible to your current Jellyfin account.</p>
+            <p>Discover Settings also offers native catalog language/region and existing email-event preferences, plus permission-gated issue and blocklist screens. Issues support your history, reports, comments, and permitted resolve/reopen actions. Removing a blocklisted title also removes its Seerr catalog record and associated request/issue history, as the confirmation explains; media files stay on the media server. Full server administration and notification delivery-agent setup remain in Seerr.</p>
+          </div>
+          <div class="faq">
+            <h3>What if a Seerr request times out?</h3>
+            <p>The server may have received a request even when Gus did not receive the response. Refresh the title and My Requests before submitting again. Gus reconciles an uncertain result instead of automatically replaying the submission. An expired session requires Sign In Again; for connection errors, check the instance address, proxy path, and certificate trust. Include the app and Seerr versions in reports, without passwords, cookies, or private server URLs.</p>
           </div>
           <div class="faq">
             <h3>Does Gus support Quick Connect?</h3>
@@ -57,8 +89,17 @@ navCurrent: "support"
             <p>Self-hosted Jellyfin servers often use HTTP on trusted local networks. For remote access, use HTTPS and server configuration appropriate for your network.</p>
           </div>
           <div class="faq">
+            <h3>What changes are in the app-wide refinement candidate?</h3>
+            <p>The candidate keeps AVPlayer and native AVKit controls. Expired Jellyfin sessions ask you to sign in again while preserving current saved queues, positions and downloads; permission errors remain separate. Refreshes retain usable content; a full list that stops before Jellyfin's advertised total keeps its loaded items and offers retry. Actions distinguish server acceptance, observed confirmation and uncertain results. An uncertain collection change requires refresh and explicit acceptance of the server state before another edit. If a canceled profile save may have reached Jellyfin, reload your profile before saving again.</p>
+            <p>If the system cannot activate playback audio, the candidate shows a recoverable error for audio or video; Try Again starts a new attempt. Responsive player, album, music-library and About-card layouts keep one set of controls and native focus targets as width or text settings change. The standard artwork-backed detail header uses consistent opaque backing behind its text. Native focus and contrast checks remain in progress.</p>
+            <p>Changing versions with progress asks for Start Over or Resume at Timestamp because different cuts can have different timelines. Resume is unavailable at or beyond the selected version's known length. After playback starts, reopening uses its new progress; canceling preparation preserves your start choice. Audio/subtitle remembering is opt-in for each device and Jellyfin account and only applies to later episodes of the same series. Missing or ambiguous named tracks use defaults with a notice. A selected version cannot silently use a different downloaded version. For remuxed or converted downloads, Gus omits server track choices it cannot verify against the saved file. When enabled for the app, CarPlay audio offers native version/audio choices for eligible items; single-choice items start directly. Watch players show unavailable-track notices; prepared audio retains visible track details during later loading or failure with unavailable transport disabled, and loading video offers Cancel. Watch Play On distinguishes command acceptance from a player update confirmed by the server.</p>
+            <p>Unreadable current download metadata is preserved and shown with Try Again, rather than as No Downloads. Artwork retains native AsyncImage behavior on OS 26; OS 27 uses a connection-owned memory cache cleared when that connection retires. Compatible HLS I-frame renditions are preserved for previews where native AVKit exposes them; thumbnail UI depends on the platform. The observed iPhone simulator run verifies seeking, not thumbnail display. Apple TV chapter artwork is separate; Jellyfin JPEG trickplay alone does not supply AVKit scrubber thumbnails.</p>
+            <p>On iPhone and iPad, a book that cannot open offers Try Again. If content later becomes unavailable, a nonblocking notice keeps the current reader open. Dismiss keeps reading; Try Again reopens from the last saved position. Chapter selection has a bounded readiness check and recovery feedback.</p>
+            <p>Retired local-playlist imports and old queue formats are removed without importing them; current server-backed lists, offline drafts and current saved state remain supported. See the <a href="https://github.com/eslutz/A-Playa-Named-Gus/wiki/App-Wide-Refinement">refinement guide</a>. Availability depends on the installed build. Implementation and local checks do not establish physical-device, iCloud, hosted CI or release acceptance.</p>
+          </div>
+          <div class="faq">
             <h3>Why does playback fail for some files?</h3>
-            <p>Playback depends on the media, Jellyfin server capabilities, network conditions, and AVKit support on the current Apple platform. Files your device's hardware can decode play directly at original quality; everything else is transcoded by your server. If a file fails, include format details and whether it direct-plays or transcodes on the server.</p>
+            <p>Playback depends on the media, Jellyfin server capabilities, network conditions, and AVKit support on the current Apple platform. Compatible originals play directly at original quality. When only the container packaging is incompatible, Gus asks Jellyfin to remux compatible video and audio without re-encoding; unsupported streams require transcoding. Live TV uses the same native player; Gus asks Jellyfin for compatible segmented HLS when a transport-stream source needs repackaging. Compatible MP4 files remain eligible for direct playback. If a file fails, include format details and whether it direct-plays or transcodes on the server.</p>
           </div>
           <div class="faq">
             <h3>Can I limit streaming quality?</h3>
@@ -77,9 +118,15 @@ navCurrent: "support"
             <p>Playable originals download directly. When the container needs changing, Gus asks Jellyfin to preserve compatible video and audio while remuxing; only incompatible streams are re-encoded. Compatible HEVC video keeps its original resolution and surround audio. The preparation stage includes both remuxing and conversion, and percentage progress can remain unavailable when the server does not provide the file size.</p>
           </div>
           <div class="faq">
+            <h3>Where do I find books and audiobooks?</h3>
+            <p>In builds with separate Books and Audiobooks destinations, look for both in the main navigation. Gus can browse both from the same Jellyfin library. Open a title to see its synopsis, credits and saved progress.</p>
+          </div>
+          <div class="faq">
             <h3>How do I find media saved on my device?</h3>
-            <p>The upcoming Downloaded section provides local search and show/season browsing, with a link to Manage Downloads. Completed files play from your device; unavailable thumbnails use a placeholder.</p>
+            <p>The Downloaded section provides local search and show/season browsing, with a link to Manage Downloads. Completed files and saved thumbnails are available on your device. Missing artwork is retried while online; unavailable server images use a placeholder.</p>
             <p>The updated transfer screen shows bytes received even when the server does not provide a total size. Percentage and approximate remaining time require a reliable size and measured speed. Processing estimates may be unavailable.</p>
+            <p>Gus checks available device space before starting or resuming a transfer and accounts for known sizes and active downloads. If a download runs out of room, free space and choose Try Again in Settings → Downloads.</p>
+            <p>In the current candidate, swipe Delete removes an item immediately from Downloaded. In Settings → Downloads, choose Select, then select individual rows or Select All. The trash action appears once you select a download and asks for confirmation. Removing downloads frees space on this device. Delete After Finishing is off by default. When enabled, Gus removes completed video and audio automatically and removes books when you close its reader at the end. External readers cannot report completion to Gus.</p>
             <p>On iPhone and iPad, the updated background lifecycle saves completed transfers while Gus is backgrounded. Do not force-quit Gus while downloading. This update is undergoing physical-device acceptance; availability depends on the installed release.</p>
           </div>
           <div class="faq">
@@ -88,6 +135,11 @@ navCurrent: "support"
           </div>
         </article>
       </div>
+
+      <section aria-labelledby="client-diagnostics">
+        <h2 id="client-diagnostics">Client diagnostics (in development)</h2>
+        <p>Settings → Developer → Client Logs prepares a local JSON support export with the latest 200 app events and available performance summaries. Names, media titles, server addresses and sign-in details are excluded. Nothing is uploaded automatically. Supported platforms offer native sharing; Apple TV requires a paired Mac and a development-installed app for Xcode container extraction. TestFlight extraction and physical-device acceptance are not confirmed. See the <a href="https://github.com/eslutz/A-Playa-Named-Gus/wiki/Apple-TV">Apple TV guide</a>.</p>
+      </section>
 
       <aside class="side-panel" aria-labelledby="support-links">
         <h2 id="support-links">Useful links</h2>
@@ -105,9 +157,11 @@ navCurrent: "support"
   <section class="page">
     <article class="content-block">
       <h2>Next Up and playlist synchronization</h2>
-      <p>For builds with native Jellyfin lists, see the <a href="https://github.com/eslutz/A-Playa-Named-Gus/wiki/Next-Up-and-Playlists">Next Up, Playlists and Collections guide</a>. Jellyfin owns playlist and collection names, membership, playlist order and permissions. Gus caches lists by server/user and saves offline edits until it can contact Jellyfin. Collections group titles; all-video playlists support ordered video playback, existing audio playlists open the audio player, and mixed-media entries open individually.</p>
-      <p>Home Next Up sorts by recent activity. Optional private iCloud synchronization carries Gus resume positions, Next Up intent and activity; it requires the same iCloud account and independent sign-in to the same Jellyfin server/user on each device. When iCloud sync is disabled, iCloud account changes leave local saved data visible. The first verified identity preserves legacy saved-queue order; later accounts remain isolated. Native lists come from Jellyfin, pending server edits stay on their originating device, and downloaded files remain device-local. Previous Gus playlists can be explicitly imported with originals preserved. Jellyfin 10.11.11 accepts each media item once per playlist, so legacy lists with repeated items are preserved and import reports a limitation instead of silently collapsing entries.</p>
-      <p>If a server change needs review, refresh and inspect Jellyfin before explicitly retrying or discarding it: a create/add request may have succeeded even when its response was lost. A missing video-playlist item can be retried, skipped, or explicitly replaced without deleting your underlying media. Signed iCloud provisioning and physical cross-device validation remain pending for this feature branch.</p>
+      <p>In builds with media context menus, long press a title to add it to Next Up, a playlist or a collection. Within a group, Remove from the named group preserves media files and watched history. Movies and episodes offer Mark Watched and Mark Unwatched; both reset the item's resume position and update its finished status in Jellyfin. Removing a media item from Next Up also clears its Jellyfin Continue Watching position and local resume checkpoint without marking it watched. The dismissal stays on the current device/account until the item is explicitly added or played again. Mark Watched removes the item; Mark Unwatched alone does not restore it. Active playlists represent their individual members, except an unfinished earlier episode skipped by the playlist.</p>
+      <p>For builds with native Jellyfin lists, see the <a href="https://github.com/eslutz/A-Playa-Named-Gus/wiki/Next-Up-and-Playlists">Next Up, Playlists and Collections guide</a> and the <a href="https://github.com/eslutz/A-Playa-Named-Gus/wiki/Collections">Collections guide</a>. Jellyfin owns playlist and collection names, membership, playlist order and permissions. Gus caches playlists by server/user and saves playlist edits until it can contact Jellyfin. Collections appear within Movies, have artwork and membership links, and require an online connection for edits. Collection editing is permission-gated and unavailable on Apple TV. Collections group titles; all-video playlists support ordered video playback, existing audio playlists open the audio player, and mixed-media entries open individually.</p>
+      <p>Open a playlist to see its cover and thumbnails for entries with artwork. In builds with the updated playlist controls, the + toolbar action opens New Playlist directly, and Add Items is an icon above the playlist content. More contains Rename, Edit Items and confirmed Delete Playlist. Editing shows left reorder handles and right remove buttons; Done exits the mode. Play/Resume follows saved progress, while Start from Beginning is separate. Tapping a video playlist entry starts the playlist from that entry instead of opening details. Item details place watched status and Add to Playlist/Collection in More, with Next Up and restart beneath playback.</p>
+      <p>Home Next Up sorts by recent activity. Optional private iCloud synchronization carries Gus resume positions, Next Up intent and activity; it requires the same iCloud account and independent sign-in to the same Jellyfin server/user on each device. When iCloud sync is disabled, iCloud account changes leave local saved data visible. The first verified identity preserves current local saved-queue order; later accounts remain isolated. Native lists come from Jellyfin, pending server edits stay on their originating device, and downloaded files remain device-local. The refinement candidate removes retired Gus-only playlist imports and old queue formats without importing that data; current Jellyfin playlists, offline drafts and supplemental state remain supported. Jellyfin 10.11.11 accepts each media item once per native playlist.</p>
+      <p>If a playlist edit needs review, refresh and inspect Jellyfin before explicitly retrying or discarding it: a create/add request may have succeeded even when its response was lost. Collection changes remain online-only; the refinement candidate requires a fresh server snapshot and Use Current Server State after an uncertain result before another edit. A missing video-playlist item can be retried, skipped, or explicitly replaced without deleting your underlying media. Signed iCloud provisioning and physical cross-device validation remain pending for this feature branch.</p>
     </article>
   </section>
 </main>

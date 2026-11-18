@@ -19,7 +19,7 @@ navCurrent: "privacy"
       <div>
         <article class="content-block">
           <h2>Last updated</h2>
-          <p>October 18, 2026</p>
+          <p>November 17, 2026</p>
         </article>
 
         <article class="content-block">
@@ -45,12 +45,14 @@ navCurrent: "privacy"
         <article class="content-block">
           <h2>Data sent to Jellyfin servers</h2>
           <p>Gus sends requests to the Jellyfin server you choose, including sign-in requests, library browse and search requests, stream requests, playback progress reports, and optional download requests. That server is controlled by you or by the server operator you choose. Gus does not operate the Jellyfin server.</p>
+          <p>When you save profile changes, Gus sends your current password to that Jellyfin server to verify your account. It sends the changes you choose, such as a new username, language preference, profile picture or password. Gus keeps passwords out of its stored user records.</p>
         </article>
 
         <article class="content-block">
           <h2>Optional Discover connection</h2>
-          <p>In builds with Discover, you can connect a Seerr instance to search its catalog, submit movie and season requests, view request history, and approve or decline requests when authorized. Sign-in and these actions go to the Seerr operator you choose. Movie and show poster artwork may load from TMDB. The developer does not receive your Seerr searches, requests, credentials, or server address.</p>
-          <p>Connection metadata is stored locally per Gus server/account. Session cookies are stored in Apple Keychain. Gus does not save passwords; Apple’s Password AutoFill may separately offer to save them at your choice. Seerr sessions are not synchronized through iCloud. Hiding Discover keeps the connection; disconnecting removes its saved local session.</p>
+          <p>In builds with Discover, you can connect your existing Seerr instance and account. Sign-in, catalog and person lookups, searches, requests, cancellations, request-history reads, authorized manager decisions, issue descriptions/comments, blocklist actions, and account preference updates go to the Seerr operator you choose. The developer does not receive your Seerr activity, credentials, or server address from the app.</p>
+          <p>Seerr supplies third-party movie, show, and person metadata. Posters, backdrops, and person artwork may load directly from TMDB, whose image service receives the network information needed to serve those images. Your chosen Seerr operator and these third-party services have their own privacy practices.</p>
+          <p>Connection metadata is stored locally per Gus Jellyfin server/account. Session cookies are stored in this device's Apple Keychain, isolated from browser sessions, and are not synchronized through iCloud. Gus does not save passwords; Apple's Password AutoFill may separately offer to save them at your choice. Switching Gus accounts isolates their Seerr connections. Hiding Discover keeps the connection; Disconnect This Device removes its saved local connection for the current Gus account.</p>
         </article>
 
         <article class="content-block">
@@ -82,7 +84,7 @@ navCurrent: "privacy"
           <li>No tracking.</li>
           <li>No advertising identifiers.</li>
           <li>No developer-side analytics SDK.</li>
-          <li>No Jellyfin credentials sent to the developer.</li>
+          <li>No Jellyfin or Seerr credentials sent to the developer.</li>
         </ul>
       </aside>
     </div>
