@@ -12,6 +12,7 @@ This repository is the Eleventy source for the public A Playa Named Gus website 
 - Use Eleventy with Nunjucks templates from `src/` and plain generated HTML/CSS in `_site/`.
 - Keep shared page chrome, metadata, navigation, and footer behavior in `src/_includes/layouts/base.njk`.
 - Keep site styling in the existing stylesheet path for this repo.
+- Use the shared house typeface [Mona Sans](https://github.com/github/mona-sans) for body copy. Self-host it from `src/assets/fonts/` and declare it with `@font-face` plus a `preload` link; never load fonts from a CDN. It is SIL OFL 1.1 with a Reserved Font Name, so ship it unmodified and keep `src/assets/fonts/OFL.txt` beside it. Always keep a system-font fallback stack after the family name so text renders before the woff2 arrives. Declare only the axes the file actually has — weight and width, no slant.
 - Keep public routes slash-normalized in links and canonical URLs.
 - Do not add runtime JavaScript unless a concrete user-facing requirement needs it.
 - Do not add visible App Store, TestFlight, or download links unless a real public URL exists.
@@ -39,6 +40,7 @@ Pushing to `main` triggers `.github/workflows/deploy.yml`, builds the site, and 
 - Public URL: <https://gus.ericslutz.dev>
 - Custom domain file: `src/CNAME`
 - Stylesheet: `src/styles.css`
+- Font: `src/assets/fonts/MonaSans.woff2` with `src/assets/fonts/OFL.txt`
 - Deployment workflow: `.github/workflows/deploy.yml`
 - Validation command: `npm test`
 - Required routes: `/`, `/support/`, `/privacy/`, `/accessibility/`, `/age-suitability/`
